@@ -6,7 +6,7 @@ var content = {
             "thumbnail": require("./assets/post/pst1.jpg"),
             "description": "aioxima",
             "route": "/"
-        }   
+        },   
     ]
 }
 export default content;
