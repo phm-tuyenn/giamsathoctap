@@ -13,7 +13,7 @@ export default function PageNumber(props) {
     }
 
     return (
-        <Pagination className="d-flex justify-content-center">
+        <Pagination className="d-flex justify-content-center" data-bs-theme="dark">
             <Pagination.First onClick={() => navigate("/")}/>
             <Pagination.Prev onClick={() => navigate(`/${((props.active - 1) > 1) ? `pg${(props.active - 1)}` : ""}`)}/>
             {items}

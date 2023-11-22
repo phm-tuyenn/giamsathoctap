@@ -2,17 +2,18 @@ import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom"
 import Navigation from "./components/Navigation"
 import Footer from "./components/Footer";
+import "./layout.css"
 
 export default function Layout() { 
   return (
-    <>
-      <Navigation/>
+    <div className="page-container">
+        <Navigation className="head"/>
 
-      <Container className="my-3">
-        <Outlet/>
-      </Container>
+        <Container className="out my-4">
+          <Outlet/>
+        </Container>
 
-      <Footer/>
-    </>
+      <Footer className="foot"/>
+    </div>
   );
 }

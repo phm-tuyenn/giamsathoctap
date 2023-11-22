@@ -1,5 +1,6 @@
 .dark { 
     color: white!important;
+    background-color: transparent!important;
 }
 .dark a { 
     color: white!important;
@@ -15,5 +16,5 @@
     border: 0px;
 }
 .dark .nav-button:hover {
-    background: #dddddd50;
+    background: #0c0d0f;
 }

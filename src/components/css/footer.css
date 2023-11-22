@@ -5,3 +5,6 @@ ul {
 a:hover {
     color: #ddd!important;
 }
+#foot {
+    background-color: transparent!important;
+}
