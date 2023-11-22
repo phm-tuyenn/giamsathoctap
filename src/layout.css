@@ -1,6 +1,9 @@
 * {
     color: white;
 }
+noscript {
+    color: black;
+}
 .page-container{ 
     min-height: 100vh; 
     margin: 0; 
