@@ -1,6 +1,6 @@
 .dark { 
     color: white!important;
-    background-color: transparent!important;
+    border-radius: 5px;
 }
 .dark a { 
     color: white!important;
@@ -17,4 +17,9 @@
 }
 .dark .nav-button:hover {
     background: #0c0d0f;
+}
+@media screen and (max-width: 600px) {
+    #top {
+        position: static !important;
+    }
 }

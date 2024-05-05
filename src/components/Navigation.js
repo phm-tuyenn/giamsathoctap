@@ -6,12 +6,24 @@ import logo from "../assets/logo.jpg"
 
 export default function Navigation() {
   const [show, setShow] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+
+  const toggleVisible = () => { 
+    const scroll = document.documentElement.scrollTop; 
+    if (scroll > 100){ 
+      setScrolled(true) 
+    }  
+    else if (scroll <= 100){ 
+      setScrolled(false) 
+    } 
+  }; 
+  window.addEventListener('scroll', toggleVisible); 
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <>
-      <Navbar className="rounded-bottom dark" sticky="top" data-bs-theme="dark" bg="dark">
+      <Navbar className="rounded-bottom dark" style={{ backgroundColor: (scrolled) ? "rgba(0, 0, 0, 0.8)" : "rgba(0, 0, 0, 0.3)" }} sticky="top" id="top" data-bs-theme="dark">
       <Container fluid className="px-3">
         <Navbar.Brand className="ms-4">
           <Link to="/">
@@ -25,9 +37,6 @@ export default function Navigation() {
           </Nav.Item>
           <Nav.Item className="mx-4 d-none d-sm-block">
             <Link to="/about"><Button className="nav-button">Tôi là ai</Button></Link>
-          </Nav.Item>
-          <Nav.Item className="mx-4 d-none d-sm-block">
-            <Link to="/internet"><Button className="nav-button">Tôi trên Internet</Button></Link>
           </Nav.Item>
           <Nav.Item className="mx-4 d-none d-sm-block">
             <Link to="/donate"><Button className="nav-button">Donate</Button></Link>
@@ -52,7 +61,6 @@ export default function Navigation() {
         <Stack gap={3}>
           <Link onClick={handleClose} to="/"><Button className="nav-button">Bài viết</Button></Link>
           <Link onClick={handleClose} to="/about"><Button className="nav-button">Tôi là ai</Button></Link>
-          <Link onClick={handleClose} to="/internet"><Button className="nav-button">Tôi trên Internet</Button></Link>
           <Link onClick={handleClose} to="/donate"><Button className="nav-button">Donate</Button></Link>
         </Stack>
       </Offcanvas.Body>

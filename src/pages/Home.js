@@ -8,10 +8,10 @@ import PageNumber from "../components/PageNumber";
 export default function Home() {
   return (
     <>
-      <PageTitle name="Phạm Tuyên - Trang chủ"/>
+      <PageTitle name="Trang chủ - Phạm Tuyên"/>
       <Row sm={1} md={2} lg={3} xxl={4} className="g-4">
         {content.content.map((post, id) => (
-          <Col key={id}>
+          <Col key={id} className="d-flex justify-content-center">
             <Link to={post.route}>
               <Tile title={post.title} description={post.description} thumbnail={post.thumbnail}/>
             </Link>

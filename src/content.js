@@ -7,6 +7,48 @@ var content = {
             "description": "aioxima",
             "route": "/"
         },   
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
+        {
+            "title": "do nhu ban",
+            "thumbnail": require("./assets/post/pst1.jpg"),
+            "description": "aioxima",
+            "route": "/"
+        }, 
     ]
 }
 export default content;
