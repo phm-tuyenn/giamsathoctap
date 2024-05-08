@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <PageTitle name="Trang chủ - Phạm Tuyên"/>
       <Row sm={1} md={2} lg={3} xxl={4} className="g-4">
-        {content.content.map((post, id) => (
+        {content.content.reverse().map((post, id) => (
           <Col key={id} className="d-flex justify-content-center">
-            <Link to={post.route}>
-              <Tile title={post.title} description={post.description} thumbnail={post.thumbnail}/>
+            <Link to={`/post/${post.route}`}>
+              <Tile width="18rem" title={post.title} description={post.description} thumbnail={post.thumbnail}/>
             </Link>
           </Col>
         ))}

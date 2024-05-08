@@ -16,7 +16,7 @@ export default function About() {
         <h5>🎂<Text text={'2008'}/></h5>
         <br/>
         <h3><Text text={"Hiện tại đang là: "}/></h3>
-        <h5>🎓<Text text={"Học sinh THPT FPT Hà Nội"}/></h5>
+        <h5>🎓<Text text={"Học sinh THPT FPT Hà Nội K11"}/></h5>
         <a href="https://ftc-events.firstinspires.org/2023/team/25209" target="_blank" rel="noreferrer"><h5>🤖<Text style={{ color: "blue" }} text={"Thành viên team FTC #25209"}/></h5></a>
         <a href="https://www.robotevents.com/teams/VIQRC/41794W" target="_blank" rel="noreferrer"><h5>🤖<Text style={{ color: "blue" }} text={"Cựu thành viên team VIQRC #41794W"}/></h5></a>
         <br/>
