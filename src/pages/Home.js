@@ -8,7 +8,7 @@ import PageNumber from "../components/PageNumber";
 export default function Home() {
   return (
     <>
-      <PageTitle name="Trang chủ - Phạm Tuyên"/>
+      <PageTitle name="Trang chủ - Phạm Tuyên" description="Trang chủ - Page này để chia sẻ"/>
       <Row sm={1} md={2} lg={3} xxl={4} className="g-4">
         {content.content.reverse().map((post, id) => (
           <Col key={id} className="d-flex justify-content-center">

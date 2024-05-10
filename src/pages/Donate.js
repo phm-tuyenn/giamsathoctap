@@ -5,7 +5,7 @@ import { Image, Row, Col } from "react-bootstrap";
 export default function Internet() {
     return (
         <>
-            <PageTitle name="Donate - Phạm Tuyên"/>
+            <PageTitle name="Donate - Phạm Tuyên" description="Khều donate"/>
             <Row>
                 <Col></Col>
                 <Col sm={6}>

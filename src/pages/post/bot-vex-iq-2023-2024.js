@@ -6,7 +6,7 @@ let data = content.content[0]
 
 export default function Post1() {
     return (<>
-        <PageTitle name={`${data.title} - Phạm Tuyên`}/>
+        <PageTitle name={`${data.title} - Phạm Tuyên`} description={`${data.description}`}/>
         <Container fluid>
             <Row>
                 <Col></Col>

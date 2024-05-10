@@ -9,9 +9,9 @@ import github from "../assets/github.svg"
 export default function About() {
   return (
     <>
-      <PageTitle name="Về tôi - Phạm Tuyên"/>
+      <PageTitle name="Về tôi - Phạm Tuyên" description="Giới thiệu về tôi và page này"/>
       <Image className="profile-picture" src={profilePicture}></Image>
-      <Container style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}className="p-3 rounded">
+      <Container style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }} className="p-3 rounded">
         <h1><Text text={'Phạm Thành Tuyên'}/></h1>
         <h5>🎂<Text text={'2008'}/></h5>
         <br/>
@@ -34,6 +34,12 @@ export default function About() {
         <h3><Text text={"Mạng xã hội: "}/></h3>
         <a href="https://facebook.com/phm.tuyenn" target="_blank" rel="noreferrer"><h5><Image src={fb} width={""}></Image> <Text style={{ color: "blue" }} text={"https://facebook.com/phm.tuyenn"}/></h5></a>
         <a href="https://github.com/phm-tuyenn" target="_blank" rel="noreferrer"><h5><Image src={github}></Image> <Text style={{ color: "blue" }} text={"https://github.com/phm-tuyenn"}/></h5></a>
+      </Container>
+      <Container style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }} className="p-3 rounded mt-3">
+        <h1>Về trang này</h1>
+        <p>
+          Đây là blog cá nhân của mình, đồng thời là dự án của mình để luyện tập ReactJS. Ở đây, mình chia sẻ về những kiến thức, trải nghiệm và đời sống của mình. Rất mong mọi người sẽ ủng hộ mình.
+        </p>
       </Container>
     </>
   );

@@ -36,7 +36,7 @@ export default function Navigation() {
             <Link to="/"><Button className="nav-button">Bài viết</Button></Link>
           </Nav.Item>
           <Nav.Item className="mx-4 d-none d-sm-block">
-            <Link to="/about"><Button className="nav-button">Tôi là ai</Button></Link>
+            <Link to="/about"><Button className="nav-button">Giới thiệu</Button></Link>
           </Nav.Item>
           <Nav.Item className="mx-4 d-none d-sm-block">
             <Link to="/donate"><Button className="nav-button">Donate</Button></Link>
@@ -60,7 +60,7 @@ export default function Navigation() {
       <Offcanvas.Body>
         <Stack gap={3}>
           <Link onClick={handleClose} to="/"><Button className="nav-button">Bài viết</Button></Link>
-          <Link onClick={handleClose} to="/about"><Button className="nav-button">Tôi là ai</Button></Link>
+          <Link onClick={handleClose} to="/about"><Button className="nav-button">Giới thiệu</Button></Link>
           <Link onClick={handleClose} to="/donate"><Button className="nav-button">Donate</Button></Link>
         </Stack>
       </Offcanvas.Body>

@@ -10,7 +10,7 @@ export default function Footer() {
             <h5>Link hữu ích</h5>
             <ul>
               <li><Link to="/">Bài viết</Link></li>
-              <li><Link to="/about">Về tôi</Link></li>
+              <li><Link to="/about">Giới thiệu</Link></li>
               <li><Link to="/donate">Donate cho tôi</Link></li>
             </ul>
           </Col>
