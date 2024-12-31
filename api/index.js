@@ -17,7 +17,7 @@ const redis = new Redis({
 app.get('/api/get', (req, res) => {
     redis.get(req.body.code)
     .then(result => { 
-        if (!(result.length() === 0)) res.send(result) 
+        if (result) res.send(result) 
         else res.send([])
     })
     .catch(e => res.send([]))
