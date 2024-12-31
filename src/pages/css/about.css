@@ -1,7 +1,0 @@
-.profile-picture{
-    object-fit: cover;
-    float: right;
-    border-radius: 10px;
-    width: 30%;
-    filter: grayscale();
-}  
