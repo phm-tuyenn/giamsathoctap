@@ -16,7 +16,11 @@ const redis = new Redis({
 // Define a route
 app.get('/api/get', (req, res) => {
     redis.get(req.body.code)
-    .then(result => res.send(result))
+    .then(result => { 
+        if (!(result.length() === 0)) res.send(result) 
+        else res.send([])
+    })
+    .catch(e => res.send([]))
 });
 
 // Start the server
