@@ -1,8 +1,10 @@
 // Import Express
 const express = require('express');
+const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.set('port', (process.env.PORT || 8000));
 
 const { Redis } = require('@upstash/redis')
@@ -12,7 +14,7 @@ const redis = new Redis({
 })
 
 // Define a route
-app.get('/', (req, res) => {
+app.get('/api/get', (req, res) => {
     redis.get(req.body.code)
     .then(result => res.send(result))
 });
