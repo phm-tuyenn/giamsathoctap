@@ -15,7 +15,7 @@ const redis = new Redis({
 
 // Define a route
 app.get('/api/get', (req, res) => {
-    redis.get(req.body.code)
+    redis.get(req.query.code)
     .then(result => { 
         if (result) res.send(result) 
         else res.send([])
