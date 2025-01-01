@@ -51,7 +51,7 @@ export default function Home() {
 
   const update = () => {
     setSpinner(true);
-    fetch("http://localhost:8000/api/get?code=" + ref.current.value)
+    fetch("https://giamsathoctap.vercel.app/api/get?code=" + ref.current.value)
     .then(res => res.json())
     .then(res => {
       setContent(JSON.stringify(res))
