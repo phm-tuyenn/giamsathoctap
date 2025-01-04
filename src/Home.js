@@ -35,6 +35,7 @@ export default function Home() {
   const ref = useRef()
   const [content, setContent] = useState("[]")
   const [spinner, setSpinner] = useState(false);  
+  const [triggApp, setTriggApp] = useState(false)
   const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -51,10 +52,16 @@ export default function Home() {
 
   const update = () => {
     setSpinner(true);
-    fetch("https://giamsathoctap.vercel.app/api/get?code=" + ref.current.value)
+    fetch("https://giamsathoctap.vercel.app/api/getLog?code=" + ref.current.value)
     .then(res => res.json())
     .then(res => {
       setContent(JSON.stringify(res))
+      setSpinner(false);
+    })
+    fetch("https://giamsathoctap.vercel.app/api/getEnable?code=" + ref.current.value)
+    .then(res => res.json())
+    .then(res => {
+      setTriggApp(res.enable)
       setSpinner(false);
     })
   }
@@ -62,6 +69,14 @@ export default function Home() {
   useEffect(() => {
     update()
   }, [count])
+
+  const handleTriggApp = () => {
+    setSpinner(true);
+    fetch("https://giamsathoctap.vercel.app/api/setEnable?code=" + ref.current.value + "&enable=" + ((triggApp) ? "false" : "true"))
+    .then(res => {
+      setSpinner(false);
+    })
+  }
 
   return (<>
       <PageTitle name="Nhật ký giám sát học tập"/>
@@ -71,8 +86,12 @@ export default function Home() {
             <Col sm={2}><Form.Label htmlFor="code" className="text-center">Mã giám sát: </Form.Label></Col>
             <Col sm={4}><Form.Control id="code" type="text" placeholder="xxxx" ref={ref}></Form.Control></Col>
             <Col sm={1}><Button variant="success" onClick={handleSubmit}>OK</Button></Col>
-            <Col sm={1}>
-              {(spinner) ? <Spinner animation="border" role="status">
+            <Col sm={4}>
+              {(JSON.parse(content).length === 0) ? <Button onClick={handleTriggApp} variant={(triggApp) ? "danger" : "primary"}>
+                {(!triggApp) ? "Bật" : "Tắt"} chế độ giám sát
+              </Button>
+              : <></>}
+              {(spinner) ? <Spinner animation="border" role="status" className="ms-2">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
               : <></>}
