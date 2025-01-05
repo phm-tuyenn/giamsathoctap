@@ -87,10 +87,9 @@ export default function Home() {
             <Col sm={4}><Form.Control id="code" type="text" placeholder="xxxx" ref={ref}></Form.Control></Col>
             <Col sm={1}><Button variant="success" onClick={handleSubmit}>OK</Button></Col>
             <Col sm={4}>
-              {(JSON.parse(content).length === 0) ? <Button onClick={handleTriggApp} variant={(triggApp) ? "danger" : "primary"}>
+              <Button onClick={handleTriggApp} variant={(triggApp) ? "danger" : "primary"}>
                 {(!triggApp) ? "Bật" : "Tắt"} chế độ giám sát
               </Button>
-              : <></>}
               {(spinner) ? <Spinner animation="border" role="status" className="ms-2">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
