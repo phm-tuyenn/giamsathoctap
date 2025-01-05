@@ -13,7 +13,6 @@ const redis = new Redis({
     token: 'AZm9AAIjcDE1YzA2ZDc5Y2UxZjE0OGM1OTBlM2JhMjg0ZDc4MGE1NXAxMA',
 })
 
-// Define a route
 app.get('/api/getLog', (req, res) => {
     redis.get(req.query.code)
     .then(result => { 
@@ -21,6 +20,11 @@ app.get('/api/getLog', (req, res) => {
         else res.send([])
     })
     .catch(e => res.send([]))
+});
+
+app.get('/api/setLog', (req, res) => {
+    redis.set(req.query.code, JSON.stringify(req.body))
+    res.send()
 });
 
 app.get('/api/setEnable', (req, res) => {
