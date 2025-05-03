@@ -46,7 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/register": "^7.23.7",
+    "@babel/register": "^7.25.9",
     "holderjs": "^2.9.9",
     "react-router-dom": "^6.16.0"
   }
